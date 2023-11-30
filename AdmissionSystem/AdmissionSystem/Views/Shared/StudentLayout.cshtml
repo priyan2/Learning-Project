@@ -1,0 +1,55 @@
+﻿@*@{
+        Layout = "~/Views/Shared/.cshtml";
+    }*@
+@{
+    var userName = Session["Username"];
+    ViewBag.UserName = userName;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> College Admission Portal</title> 
+    @Styles.Render("~/Content/CSS/sharedlayout.css")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="homepage-image">
+
+    <div class="nav-bar">
+        <header>
+            <ul>
+                <img src="~/Content/Images/navbar_icon.png" alt="navigationbar icon" />
+                <span class="nav-bar-heading">College Admission Management</span>
+                <li>@Html.ActionLink("Available courses", "ViewCourse", "Student")</li>
+                <li>@Html.ActionLink("Profile", "StudentProfile", "Student")</li>
+                <li>@Html.ActionLink("View Profile", "ViewProfile", "Student")</li>
+                <li>@Html.ActionLink("View applied courses", "#", "StudentRegister")</li>
+                <li>@Html.ActionLink("Change password", "ChangePassword", "Home")</li>
+                <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+            </ul>
+        </header>
+    </div>
+
+    <div>
+        @RenderBody()
+        <hr />
+        <footerclass>
+            <span style="float:left;margin:10px">&copy;2023 College Admission Portal.</span>
+        </footerclass>
+        <div class="footer-images-div">
+            <span>
+                <a href="#"><img src="~/Content/Images/youtube.png" /></a>
+            </span>
+            <span class="footer-images">
+                <a href="#"><img src="~/Content/Images/linkedin.png" /></a>
+            </span>
+            <span class="footer-images">
+                <a href="#"><img src="~/Content/Images/twitter.png" /></a>
+            </span>
+        </div>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+

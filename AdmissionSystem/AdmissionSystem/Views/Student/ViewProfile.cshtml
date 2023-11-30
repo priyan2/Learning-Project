@@ -1,0 +1,132 @@
+﻿@model IEnumerable<AdmissionSystem.Models.Registrationstudent>
+
+@{
+    ViewBag.Title = "ViewProfile";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h4>ViewProfile</h4>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataOfBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmailId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phonenumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HSCMarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SSLCMarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HSCGroup)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject1Marks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject2Marks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject3Marks)
+                </th>
+
+                <th>
+                   Profile Image
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataOfBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.State)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phonenumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HSCMarks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SSLCMarks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HSCGroup)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject1Marks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject2Marks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject3Marks)
+                    </td>
+                    @if (item.Image != null)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.Image)" alt="Student Image" style="height:100px;width:100px" />
+                    }
+                    else
+                    {
+                        <td>
+                            null
+                        </td>
+                    }
+                    <td>
+                        @Html.ActionLink("Update profile", "Edit", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </body>
+</html>

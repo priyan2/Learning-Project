@@ -1,0 +1,14 @@
+﻿.signup{
+    border : solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 10px;
+    margin-left: 40%;
+    margin-right:40%;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.text-center{
+    text-align:center;
+}

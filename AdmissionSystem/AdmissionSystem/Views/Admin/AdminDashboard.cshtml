@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@{
+    var username = Session["Username"] as string;
+}
+<h2>AdminDashboard @username </h2>
+

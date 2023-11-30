@@ -1,0 +1,312 @@
+﻿* {
+    margin: 0;
+}
+
+/* Navigation bar styles */
+
+.nav-bar {
+    background-color: powderblue;
+    text-align: right;
+    overflow: hidden;
+    padding: 10px;
+    padding: 10px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.nav-bar li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    background-color: white;
+    border: 50px;
+}
+
+.nav-bar img {
+    height: 40px;
+    width: 50px;
+    float: left;
+}
+
+.nav-bar-heading {
+    display: inline;
+    color: black;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+/* About us  section*/
+
+.aboutus-image {
+    text-align: center;
+}
+
+.aboutus-image img {
+    display: block;
+    padding: 1% 20%;
+}
+
+.about-line {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+}
+
+.about-line p {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* footer Section */
+
+.footer-section {
+    background-color: powderblue;
+    text-align: center;
+    color: black;
+}
+
+.footer-section pre {
+    font-family: "Courier New, Courier, monospace";
+    float: left;
+    color: white;
+    margin-top: 25px;
+    margin-left: 20%;
+    text-align: center;
+    background-color: powderblue;
+    display: inline;
+}
+
+/* homepage image section */
+
+.homepage-image {
+    background-image: url('images/frontpage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.homepage-main-image {
+    background-image: url('images/frontpage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.homepage-footer {
+    text-align: center;
+    background-color: powderblue;
+}
+
+/* form section*/
+
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-container form {
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+    margin: 5%;
+    margin-left: 35%;
+    margin-right: 30%;
+    padding: 30px;
+    height: 100%;
+}
+
+
+.field input {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.field label {
+    margin: 10px 0px 10px 0px;
+}
+
+.field select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.field textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.register-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: powderblue;
+    width: 100%;
+}
+
+.register-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.fileupload-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fileupload-button span {
+    display: block;
+}
+
+
+.registred-user {
+    display: block;
+    margin-left: 0%;
+    margin-top: 10px;
+}
+
+.birthdate input {
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.gender input {
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.gender label {
+    margin-right: 10px;
+}
+
+.form-photo {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.form-photo input {
+    margin-left: 13px;
+}
+
+.form-photo span {
+    display: block;
+}
+
+/* login form section */
+
+.form-container-login form {
+    background-color: white;
+    border-radius: 10px;
+    /* display: block; */
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 50px;
+    width: 30%;
+    height: auto;
+}
+
+
+.not-registred-user {
+    display: block;
+    margin-left: 1px;
+    margin-top: 20px;
+}
+
+
+.login-button {
+    background-color: powderblue;
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+}
+
+.forgot-password {
+    display: block;
+    margin-left: 1px;
+    margin-top: 20px;
+}
+
+/* about us styles */
+/* aboutus background image */
+.background-image-aboutus {
+    background-image: url('images/frontpage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+}
+
+/* .form-container-contactus{
+  background-color:white;
+  border-radius: 10px;
+  display: block;
+  margin-top:10%;
+  margin-left:30%;
+  margin-bottom: 10%;
+  padding: 50px;
+  width:30%;
+  height:auto;
+} */
+
+.contactus-footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    background-color: powderblue;
+}
+
+.contactus-footer-address {
+    display: inline-block;
+    margin-left: 10%;
+    font-size: large;
+}
+
+.contactus-footer-email {
+    /* background-color: blueviolet; */
+    display: inline-block;
+    margin-left: 20%;
+    font-size: larger;
+    padding-top: 40px;
+    margin-left: 20px;
+}
+
+.form-alert-message {
+    color: red;
+}
+
+/*Shared layout footer section*/
+.footer-images-div img {
+    height: 30px;
+    width: 30px;
+    margin-left:20px;
+ 
+}
+.footer-images-div {
+    margin:0;
+    float: right;
+    
+}

@@ -1,0 +1,125 @@
+﻿@model AdmissionSystem.Models.StudentEnquiry
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container contactus-container" >
+            <div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" style="width:50px;margin-left:100px" src="~/Content/Images/maps-and-flags.png" alt="Card image location">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center">We are here</h5>
+                                <p class="card-text">
+                                    394, Lamington Chamber, Lamington Rd, Opp Naaz Cinema, Lamington Road.<br />
+                                    Mumbai, Maharashtra-400007.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem">
+                            <img class="card-img-top" style="width: 50px; margin-left: 100px;" src="~/Content/Images/phone.png" alt="Card image address icon">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center">Call us</h5>
+                                <p class="card-text">
+                                    Office: 0422 3502440<br />
+                                    Admissions: 8220333850 | 8220333790<br />
+                                    Fax: +91 (422) 2611043
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem">
+                            <img class="card-img-top" style="width:50px;margin-left:100px" src="~/Content/Images/working-time.png" alt="Card image timing icon">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center">Working hours</h5><br />
+                                <p class="card-text">
+                                    Monday-Friday: 9:00am – 5:30pm<br />
+                                    Saturday: 9:00am – 4.00pm<br />
+                                    Sunday: Holiday
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h2>Connect with us</h2>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Lastname, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phonenumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Phonenumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Phonenumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextAreaFor(model => model.Message, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                 }
+            </div>
+        </div>
+    </body> 
+</html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<style>
+    .contactus-container{
+        margin-top:10px;
+    }
+</style>
